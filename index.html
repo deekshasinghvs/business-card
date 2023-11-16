@@ -5,7 +5,7 @@
     <script src="https://hiukim.github.io/mind-ar-js/dist/mindar-image-aframe.min.js"></script>
 </head>
 <body>
-    <a-scene mindar="imageTargetSrc: https://deekshasinghvs.github.io/business-card/targets.mind;">
+    <a-scene mindar="imageTargetSrc: https://deekshasinghvs.github.io/business-card/assets/targets.mind;">
         
         <!-- First Level Images -->
         <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/1art.JPG" position="-3 0.75 -5"></a-image>
@@ -58,7 +58,7 @@
         });
 
         function updateCarousel() {
-            const radius = 2;
+            const radius = 5;
             const firstLevelImages = document.querySelectorAll('a-image:nth-child(-n+3)');
             const secondLevelImages = document.querySelectorAll('a-image:nth-child(n+4)');
             let theta = angle;
