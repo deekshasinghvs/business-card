@@ -1,126 +1,85 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-  
+    <script src="https://hiukim.github.io/mind-ar-js/dist/mindar-image-aframe.min.js"></script>
 </head>
 <body>
-    <a-scene mindar="imageTargetSrc: ./targets.mind; showStats: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-        <a-image id="img1" src="1art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
-        <a-image id="img2" src="2art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-        <a-image id="img3" src="3art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
-        <a-image id="img4" src="4art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
-        <a-image id="img5" src="5art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-        <a-image id="img6" src="6art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
-        <a-image id="img7" src="7art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
-        <a-image id="img8" src="8art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-        <a-image id="img9" src="9art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
+    <a-scene mindar="imageTargetSrc: https://deekshasinghvs.github.io/business-card/targets.mind;">
+        
+        <!-- First Level Images -->
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/1art.JPG" position="-3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/2art.JPG" position="0 0.75 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/3art.JPG" position="3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/4art.JPG" position="-3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/5art.JPG" position="0 0.75 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/6art.JPG" position="3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/19art.JPG" position="-3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/20art.JPG" position="0 0.75 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/21art.JPG" position="3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/22art.JPG" position="-3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/23art.JPG" position="0 0.75 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/24art.JPG" position="3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/25art.JPG" position="3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/26art.JPG" position="3 0.75 -5"></a-image>
 
-        <a-box id="left-arrow" position="-5 1.5 -5" rotation="0 45 0" color="blue"></a-box>
-        <a-box id="right-arrow" position="5 1.5 -5" rotation="0 -45 0" color="red"></a-box>
+        <!-- Second Level Images -->
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/7art.JPG" position="-3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/8art.JPG" position="0 2.25 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/9art.JPG" position="3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/10art.jpg" position="-3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/11art.jpg" position="0 2.25 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/12art.jpg" position="3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/13art.JPG" position="-3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/14art.JPG" position="0 2.25 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/15art.JPG" position="3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/16art.jpg" position="-3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/17art.jpg" position="0 2.25 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/18art.jpg" position="3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/27art.jpg" position="0 2.25 -7"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/28art.jpg" position="3 2.25 -5"></a-image>
+        
 
-        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-        <a-entity mindar-image-target="targetIndex: 0">
-        </a-entity>
+        <a-box id="left-arrow" position="-5 1.5 -5" color="blue"></a-box>
+        <a-box id="right-arrow" position="5 1.5 -5" color="red"></a-box>
     </a-scene>
 
     <script>
-        // JavaScript for carousel rotation
         let angle = 0;
 
         document.querySelector('#left-arrow').addEventListener('click', function () {
-            angle -= 45; // Rotate the carousel by -45 degrees
+            angle -= 45;
             updateCarousel();
         });
 
         document.querySelector('#right-arrow').addEventListener('click', function () {
-            angle += 45; // Rotate the carousel by 45 degrees
+            angle += 45;
             updateCarousel();
         });
 
         function updateCarousel() {
-            // Update the rotation of each image
-            const radius = 5; // Adjust the radius as needed
-            const images = document.querySelectorAll('a-image');
+            const radius = 2;
+            const firstLevelImages = document.querySelectorAll('a-image:nth-child(-n+3)');
+            const secondLevelImages = document.querySelectorAll('a-image:nth-child(n+4)');
             let theta = angle;
 
-            images.forEach((image, index) => {
+            firstLevelImages.forEach((image, index) => {
                 const x = radius * Math.sin(THREE.Math.degToRad(theta));
                 const z = radius * Math.cos(THREE.Math.degToRad(theta));
-                image.setAttribute('position', {x: x, y: 1.5, z: z});
-                image.setAttribute('rotation', {x: 0, y: -theta, z: 0});
-                theta += 360 / images.length;
+                image.setAttribute('position', {x: x, y: 0.75, z: z});
+                theta += 360 / firstLevelImages.length;
+            });
+
+            theta = angle; // Reset theta for second level
+            secondLevelImages.forEach((image, index) => {
+                const x = radius * Math.sin(THREE.Math.degToRad(theta));
+                const z = radius * Math.cos(THREE.Math.degToRad(theta));
+                image.setAttribute('position', {x: x, y: 2.25, z: z});
+                theta += 360 / secondLevelImages.length;
             });
         }
 
         updateCarousel();
     </script>
 </body>
-</html> -->
-
-
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-  </head>
-  <body>
-    <a-scene mindar-image="imageTargetSrc: https://deekshasinghvs.github.io/business-card/targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
-        <!-- <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
-
-                <!-- Images -->
-                <a-image id="img1" src="https://deekshasinghvs.github.io/business-card/1art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
-                <a-image id="img2" src="https://deekshasinghvs.github.io/business-card/2art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-                <a-image id="img3" src="https://deekshasinghvs.github.io/business-card/3art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
-                <a-image id="img4" src="https://deekshasinghvs.github.io/business-card/4art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
-                <a-image id="img5" src="https://deekshasinghvs.github.io/business-card/5art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-                <a-image id="img6" src="https://deekshasinghvs.github.io/business-card/6art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
-                <a-image id="img7" src="https://deekshasinghvs.github.io/business-card/7art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
-                <a-image id="img8" src="https://deekshasinghvs.github.io/business-card/8art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-                <a-image id="img9" src="https://deekshasinghvs.github.io/business-card/9art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
-                
-                <!-- Navigation Arrows -->
-                <a-box id="left-arrow" position="-5 1.5 -5" rotation="0 45 0" color="blue" depth="0.1" height="1" width="1"></a-box>
-                <a-box id="right-arrow" position="5 1.5 -5" rotation="0 -45 0" color="red" depth="0.1" height="1" width="1"></a-box>
-        
-      </a-entity>
-    </a-scene>
-    <script>
-        // JavaScript for carousel rotation
-        let angle = 0;
-
-        document.querySelector('#left-arrow').addEventListener('click', function () {
-            angle -= 45; // Rotate the carousel by -45 degrees
-            updateCarousel();
-        });
-
-        document.querySelector('#right-arrow').addEventListener('click', function () {
-            angle += 45; // Rotate the carousel by 45 degrees
-            updateCarousel();
-        });
-
-        function updateCarousel() {
-            // Update the rotation of each image
-            const radius = 1; // Adjust the radius as needed
-            const images = document.querySelectorAll('a-image');
-            let theta = angle;
-
-            images.forEach((image, index) => {
-                const x = radius * Math.sin(THREE.Math.degToRad(theta));
-                const z = radius * Math.cos(THREE.Math.degToRad(theta));
-                image.setAttribute('position', {x: x, y: 1.5, z: z});
-                image.setAttribute('rotation', {x: 0, y: -theta, z: 0});
-                theta += 360 / images.length;
-            });
-        }
-
-        updateCarousel();
-    </script>
-  </body>
 </html>
