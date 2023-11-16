@@ -2,42 +2,52 @@
 <html>
 <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://hiukim.github.io/mind-ar-js/dist/mindar-image-aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+    <script>
+        AFRAME.registerComponent('face-camera', {
+            tick: function () {
+            var cameraEl = this.el.sceneEl.camera.el;
+            var position = cameraEl.getAttribute('position');
+
+            this.el.object3D.lookAt(new THREE.Vector3(position.x, position.y, position.z));
+            }
+        });
+    </script>
 </head>
 <body>
     <a-scene mindar="imageTargetSrc: https://deekshasinghvs.github.io/business-card/assets/targets.mind;">
         
         <!-- First Level Images -->
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/1art.JPG" position="-3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/2art.JPG" position="0 0.75 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/3art.JPG" position="3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/4art.JPG" position="-3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/5art.JPG" position="0 0.75 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/6art.JPG" position="3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/19art.JPG" position="-3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/20art.JPG" position="0 0.75 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/21art.JPG" position="3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/22art.JPG" position="-3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/23art.JPG" position="0 0.75 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/24art.JPG" position="3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/25art.JPG" position="3 0.75 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/26art.JPG" position="3 0.75 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/1art.JPG" position="-3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/2art.JPG" position="0 0.75 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/3art.JPG" position="3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/4art.JPG" position="-3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/5art.JPG" position="0 0.75 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/6art.JPG" position="3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/19art.jpg" position="-3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/20art.jpg" position="0 0.75 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/21art.jpg" position="3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/22art.jpg" position="-3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/23art.jpg" position="0 0.75 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/24art.jpg" position="3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/25art.jpg" position="3 0.75 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/26art.jpg" position="3 0.75 -5" face-camera></a-image>
 
         <!-- Second Level Images -->
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/7art.JPG" position="-3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/8art.JPG" position="0 2.25 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/9art.JPG" position="3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/10art.jpg" position="-3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/11art.jpg" position="0 2.25 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/12art.jpg" position="3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/13art.JPG" position="-3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/14art.JPG" position="0 2.25 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/15art.JPG" position="3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/16art.jpg" position="-3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/17art.jpg" position="0 2.25 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/18art.jpg" position="3 2.25 -5"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/27art.jpg" position="0 2.25 -7"></a-image>
-        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/28art.jpg" position="3 2.25 -5"></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/7art.JPG" position="-3 2.25 -5"  face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/8art.JPG" position="0 2.25 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/9art.JPG" position="3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/10art.jpg" position="-3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/11art.jpg" position="0 2.25 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/12art.jpg" position="3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/13art.jpg" position="-3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/14art.jpg" position="0 2.25 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/15art.jpg" position="3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/16art.jpg" position="-3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/17art.jpg" position="0 2.25 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/18art.jpg" position="3 2.25 -5" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/27art.jpg" position="0 2.25 -7" face-camera></a-image>
+        <a-image look-at="[camera]" src="https://deekshasinghvs.github.io/business-card/assets/28art.jpg" position="3 2.25 -5" face-camera></a-image>
         
 
         <a-box id="left-arrow" position="-5 1.5 -5" color="blue"></a-box>
@@ -48,19 +58,19 @@
         let angle = 0;
 
         document.querySelector('#left-arrow').addEventListener('click', function () {
-            angle -= 45;
+            angle -= 360 / 14; // Adjust the angle increment for 14 images per rotation
             updateCarousel();
         });
 
         document.querySelector('#right-arrow').addEventListener('click', function () {
-            angle += 45;
+            angle += 360 / 14; // Adjust the angle increment for 14 images per rotation
             updateCarousel();
         });
 
         function updateCarousel() {
-            const radius = 5;
-            const firstLevelImages = document.querySelectorAll('a-image:nth-child(-n+3)');
-            const secondLevelImages = document.querySelectorAll('a-image:nth-child(n+4)');
+            const radius = 3; // Adjust the radius as needed
+            const firstLevelImages = document.querySelectorAll('a-image:nth-child(-n+14)');
+            const secondLevelImages = document.querySelectorAll('a-image:nth-child(n+15)');
             let theta = angle;
 
             firstLevelImages.forEach((image, index) => {
@@ -79,7 +89,10 @@
             });
         }
 
+        
         updateCarousel();
+
+        
     </script>
 </body>
 </html>
