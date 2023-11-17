@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene background="color: black">
+        <!-- Images -->
+        <a-image id="img1" src="https://deekshasinghvs.github.io/business-card/assets/1art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
+        <a-image id="img2" src="https://deekshasinghvs.github.io/business-card/assets/2art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
+        <a-image id="img3" src="https://deekshasinghvs.github.io/business-card/assets/3art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
+        <a-image id="img4" src="https://deekshasinghvs.github.io/business-card/assets/5art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
+        <a-image id="img5" src="https://deekshasinghvs.github.io/business-card/assets/6art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
+        <a-image id="img6" src="https://deekshasinghvs.github.io/business-card/assets/7art.JPG" position="3 1.5 -5" rotation="0 -45 0"></a-image>
+        <a-image id="img7" src="https://deekshasinghvs.github.io/business-card/assets/8art.JPG" position="-3 1.5 -5" rotation="0 45 0"></a-image>
+        <a-image id="img8" src="https://deekshasinghvs.github.io/business-card/assets/9art.JPG" position="0 1.5 -7" rotation="0 0 0"></a-image>
+        
+        <!-- Navigation Arrows -->
+        <a-box id="left-arrow" position="-5 1.5 -5" rotation="0 45 0" color="blue" opacity="0" depth="0.1" height="1" width="1"></a-box>
+        <a-box id="right-arrow" position="5 1.5 -5" rotation="0 -45 0" color="red" opacity="0" depth="0.1" height="1" width="1"></a-box>
+    </a-scene>
+
+    <script>
+        // JavaScript for carousel rotation
+        let angle = 0;
+
+        document.querySelector('#left-arrow').addEventListener('click', function () {
+            angle -= 45; // Rotate the carousel by -45 degrees
+            updateCarousel();
+        });
+
+        document.querySelector('#right-arrow').addEventListener('click', function () {
+            angle += 45; // Rotate the carousel by 45 degrees
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            // Update the rotation of each image
+            const radius = 1; // Adjust the radius as needed
+            const images = document.querySelectorAll('a-image');
+            let theta = angle;
+
+            images.forEach((image, index) => {
+                const x = radius * Math.sin(THREE.Math.degToRad(theta));
+                const z = radius * Math.cos(THREE.Math.degToRad(theta));
+                image.setAttribute('position', {x: x, y: 1.5, z: z});
+                image.setAttribute('rotation', {x: 0, y: -theta, z: 0});
+                theta += 360 / images.length;
+            });
+        }
+
+        updateCarousel();
+    </script>
+</body>
+</html>
