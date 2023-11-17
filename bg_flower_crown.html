@@ -3,17 +3,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-face-aframe.prod.js"></script>
+    <style>
+        #parent
+        {
+          width: 100%;
+          height: 100vh;
+          scale: 0.5;
+          background-image: url('https://deekshasinghvs.github.io/business-card/assets/background.png'); 
+          background-size: cover; 
+          position: fixed;
+          z-index: 1;
+        }
+
+        a-camera
+        {
+            width: fit-content;
+            z-index: 3;
+        }
+
+        canvas
+        {
+            z-index: 30;
+        }
+  
+      </style>
   </head>
   <body>
-    <a-scene mindar-face embedded vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <!-- Green screen plane -->
-      <a-plane position="0 0 -10" rotation="0 180 0" width="30" height="30" color="#00FF00"></a-plane>
-
-      <a-camera active="false" position="0 0 0"></a-camera>
+    
+    <a-scene mindar-face embedded vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">     
+        <div id="parent">
+        </div>
+      
+        <div>
+        <a-camera active="false" position="0 0 0"></a-camera>
       <a-entity mindar-face-target="anchorIndex: 10">
         <a-image src="https://deekshasinghvs.github.io/business-card/assets/flower crown.png" rotation="5 0 0" position="0 0.3 0" scale="1 1 1"></a-image>
       </a-entity>
+      </div>
     </a-scene>
+    
   </body>
 </html>
 

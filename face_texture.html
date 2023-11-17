@@ -3,11 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://unpkg.com/es-module-shims@1.7.3/dist/es-module-shims.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-face-aframe.prod.js"></script>
+
     <style>
       #parent
       {
         width: 100%; /* Adjust the width as per your requirement */
-        height: 200vh;
+        height: 175vh;
         background-image: url('https://deekshasinghvs.github.io/business-card/assets/background.png'); /* Link to your image */
         background-size: cover; /* This ensures that the background covers the entire div */
         background-position: top; /* This centers the background image in the div */
@@ -60,9 +63,9 @@
     </style>
   </head>
   <body>
-    <div id="container">
     <div id="parent">
-    </div>
+      <div id="container">
+      </div>
   </div>
   </body>
 </html>
