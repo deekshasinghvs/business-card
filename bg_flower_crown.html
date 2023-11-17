@@ -6,8 +6,8 @@
   </head>
   <body>
     <a-scene mindar-face embedded vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <!-- Background Image -->
-      <a-sky src="https://example.com/your-background-image.jpg"></a-sky>
+      <!-- Green screen plane -->
+      <a-plane position="0 0 -10" rotation="0 180 0" width="30" height="30" color="#00FF00"></a-plane>
 
       <a-camera active="false" position="0 0 0"></a-camera>
       <a-entity mindar-face-target="anchorIndex: 10">
@@ -16,3 +16,22 @@
     </a-scene>
   </body>
 </html>
+
+<!-- <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-face-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-face embedded vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"> -->
+      <!-- Large positioned plane as background -->
+      <!-- <a-plane position="0 0 -10" rotation="0 180 0" width="30" height="30" material="src: https://deekshasinghvs.github.io/business-card/assets/sunflower_bg.png"></a-plane> -->
+<!-- 
+      <a-camera active="false" position="0 0 0"></a-camera>
+      <a-entity mindar-face-target="anchorIndex: 10">
+        <a-image src="https://deekshasinghvs.github.io/business-card/assets/flower crown.png" rotation="5 0 0" position="0 0.3 0" scale="1 1 1"></a-image>
+      </a-entity>
+    </a-scene>
+  </body>
+</html> -->
